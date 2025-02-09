@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class Student {
-
+//this is a Student Class
     public static int staticVar = 10;
 
 
