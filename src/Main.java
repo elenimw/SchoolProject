@@ -1,21 +1,68 @@
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String args[]) {
 
-        Course course1 = new Course(1, "Math", "Algebra");
-        School school1 = new School("AAU", "Texas", "Dallas", "District of Forest Ridge");
+        //Create scanner object to accept user input
 
-        //Student std1 = new Student(3, 25, "Sean" , "Xenos", sch course1);
-        Student std2 = new Student(3, 25, "Sean" , "Xenos", course1,  'A', school1);
+        Scanner scanner = new Scanner(System.in);
 
-    Student.staticVar;
-    std2.getStudentName();
-    std2.getCourseInfo();
-    std2.getStudnetSchoolInfo();
-   // std2.getStudentGradeInfo();
+//        System.out.println("Enter Student ID: ");
+//        int studentId = scanner.nextInt();
+//        scanner.nextLine();
 
-    std2.getStudentConduct(30,70);
+        System.out.println("Enter Student First Name");
+        String firstName = scanner.nextLine();
+
+        System.out.println("Enter Student Last Name");
+        String lastName = scanner.nextLine();
+
+        System.out.println("Enter Student Age");
+        int age = scanner.nextInt();
+        scanner.nextLine();
+
+//        System.out.println("Enter Course ID");
+//        int courseId = scanner.nextInt();
+//        scanner.nextLine();
+
+        System.out.println("Enter Course Name");
+        String courseName = scanner.nextLine();
+
+        System.out.println("Enter Course Description");
+        String courseDesc = scanner.nextLine();
+
+        System.out.println("Enter Grade(A, B, C..): ");
+        char grade = scanner.next().charAt(0);
+        scanner.nextLine();
+
+
+        System.out.println("Enter School Name");
+        String schoolName = scanner.nextLine();
+
+
+        System.out.println("Enter School District");
+        String schoolDistrict = scanner.nextLine();
+
+        scanner.close();
+
+        //Create Course Object
+        Course course1 = new Course(courseName, courseDesc);
+
+        //Create School Object
+        School school1 = new School(schoolName, schoolDistrict);
+
+        //Create Student Object
+
+        Student student = new Student(1, age, firstName , lastName,  school1, course1, grade);
+
+       //Print Student Information
+
+        System.out.println("Student Roaster");
+        student.getStudentName();
+        student.getCourseInfo();
+        student.getStudentSchoolInfo();
+
 
 
 

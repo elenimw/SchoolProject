@@ -9,9 +9,9 @@ public class Course {
     private List<String> courses;
 
 
-    public Course (int course_id, String courseName, String courseDesc){
+    public Course (String courseName, String courseDesc){
 
-        this.course_id = course_id;
+      //  this.course_id = course_id;
         this.courseName = courseName;
         this.courseDesc = courseDesc;
 
