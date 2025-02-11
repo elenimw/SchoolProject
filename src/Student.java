@@ -1,5 +1,7 @@
 import java.util.List;
 import java.util.Scanner;
+import  java.util.Random;
+
 
 public class Student {
 
@@ -27,6 +29,8 @@ public class Student {
     }
 
 
+
+
     public  Student(){
 
     }
@@ -34,7 +38,7 @@ public class Student {
     // Getter and Setter Methods
 
     public void getStudentName(){
-        System.out.print("Student First Name : " + firstName + " " + "Studnet Last Name : " + lastName + " \n");
+        System.out.print(  "Student First Name : " + firstName + " " + "Studnet Last Name : " + lastName + " \n");
     }
 
     public void getCourseInfo(){
