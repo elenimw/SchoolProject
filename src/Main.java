@@ -8,9 +8,9 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-//        System.out.println("Enter Student ID: ");
-//        int studentId = scanner.nextInt();
-//        scanner.nextLine();
+        System.out.println("Enter Student ID: ");
+        int studentId = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("Enter Student First Name");
         String firstName = scanner.nextLine();
@@ -22,9 +22,9 @@ public class Main {
         int age = scanner.nextInt();
         scanner.nextLine();
 
-//        System.out.println("Enter Course ID");
-//        int courseId = scanner.nextInt();
-//        scanner.nextLine();
+        System.out.println("Enter Course ID");
+        int courseId = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("Enter Course Name");
         String courseName = scanner.nextLine();
@@ -47,14 +47,14 @@ public class Main {
         scanner.close();
 
         //Create Course Object
-        Course course1 = new Course(courseName, courseDesc);
+        Course course1 = new Course(courseId, courseName, courseDesc);
 
         //Create School Object
         School school1 = new School(schoolName, schoolDistrict);
 
         //Create Student Object
 
-        Student student = new Student(1, age, firstName , lastName,  school1, course1, grade);
+        Student student = new Student(studentId, age, firstName , lastName,  school1, course1, grade);
 
        //Print Student Information
 
@@ -64,13 +64,7 @@ public class Main {
         student.getStudentSchoolInfo();
 
 
-
-
-
-
-
-
-
-
     }
 }
+
+
