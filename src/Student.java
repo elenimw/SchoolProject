@@ -1,4 +1,7 @@
 import java.util.List;
+import java.util.Scanner;
+import  java.util.Random;
+
 
 public class Student {
 
@@ -13,7 +16,7 @@ public class Student {
     private Course course;
     private char grade;
 
-
+   //Constructor
     public Student(int student_id, int age, String firstName, String lastName, School school, Course course, char grade) {
         super();
         this.student_id = student_id;
@@ -25,49 +28,42 @@ public class Student {
         this.grade = grade;
     }
 
-    public Student (int student_id, int age, String firstName, String lastName, Course course, char grade, School school){
-        this.student_id = student_id;
-        this.age = age;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.course = course;
-        this.grade = grade;
-        this.school = school;
+
+
+
+    public  Student(){
+
     }
 
+    // Getter and Setter Methods
+
     public void getStudentName(){
-        System.out.print("Student First Name : " + firstName + " " + "Studnet Last Name : " + lastName + " ");
+        System.out.print(  "Student First Name : " + firstName + " " + "Studnet Last Name : " + lastName + " \n");
     }
 
     public void getCourseInfo(){
-        System.out.println( "The student take  : " + course.getCourseName() + " " + course.getCourseDesc() + " Course : " );
+        System.out.println( "The student is taking  : " + course.getCourseName() + " -  " + course.getCourseDesc() + "\n"  );
     }
 
-    public void getStudnetSchoolInfo(){
-        System.out.print("The Student goes to " + school.getSchoolName() + " and Student Scored : "+  grade);
+    public void getStudentSchoolInfo(){
+        System.out.println("The Student goes to " + school.getSchoolName() + " and  Scored : "+  grade);
 
     }
     public void getStudentGradeInfo() {
-        System.out.print(" and Student Scored : " + grade);
+        System.out.println("Student Scored : " + grade);
 
     }
 
     public void getStudentConduct(int a, int b){
 
-        int c = 0;
-
-        c =( a + b) / 2;
+        int c = ( a + b) / 2;
 
         if (c >= 50){
             System.out.println("The student is good");
-        }
-            else {
+        } else {
                 System.out.println("The student is not good");
             }
-
-
-
-    }
+        }
 
 
     public int getStudent_id() {
@@ -85,7 +81,7 @@ public class Student {
     }
 
 
-    public void setLocation(School school) {
+    public void setSchool(School school) {
         this.school = school;
     }
 
@@ -115,6 +111,7 @@ public class Student {
 
 
     public String getFirstName() {
+
         return firstName;
     }
 
@@ -132,5 +129,7 @@ public class Student {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+
 
 }
